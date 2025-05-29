@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Personas</title>
+    <style>
+        /* Nueva fuente y paleta de colores */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f0f8;
+            color: #2e2e2e;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #1f4e79;
+            margin-bottom: 10px;
+        }
+
+        #resultados {
+            background-color: #ffffff;
+            border: 2px solid #c3dce6;
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 120px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-item {
+            border-bottom: 1px solid #d9eaf2;
+            padding: 12px 0;
+        }
+
+        .user-item:last-child {
+            border-bottom: none;
+        }
+
+        .no-results {
+            color: #667;
+            font-style: italic;
+        }
+
+        .error-message {
+            color: #b00020;
+            font-weight: bold;
+        }
+
+        form {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #b7d4e8;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #99c4d6;
+            border-radius: 5px;
+            outline-color: #5aa4d8;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #1f4e79;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #163c5c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados de la Búsqueda</h1>
+    <div id="resultados">
+        <p class="no-results">Introduce un término de búsqueda para ver resultados.</p>
+    </div>
+
+    <form id="miFormulario">
+        <input type="text" id="busqueda" name="busqueda" placeholder="Buscar por nombre, apellido o email...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
